@@ -399,7 +399,7 @@ internal abstract partial class Http3Stream : HttpProtocol, IHttp3Stream, IHttpS
                         {
                             UpdateHeaderParsingState(value, GetPseudoHeaderField(name));
 
-                            OnHeader(name, value, checkForNewlineChars: false);
+                            OnHeader(name, value, checkForNewlineChars: true);
                         }
                         break;
                     case HeaderType.NameAndValue:
